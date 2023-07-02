@@ -1,15 +1,19 @@
 //your code here
 
+
 let band=['The Virupaksha Temple', 'Victoria Memorial', 'Tajmahal']
+console.log(band,"1st band")
 
-band=band.sort();
+  const newband= band.sort();
 
-console.log(band)
+console.log(newband,"band")
 let ui=document.getElementById('band');
-ui.innerHtml=`
- {
- ${band}.map((each)=>{
- <li>${each}</li>
- })
- }
-`
+newband.forEach(bandName => {
+  const liElement = document.createElement('li');
+  liElement.textContent = bandName;
+  ui.appendChild(liElement);
+});
+
+
+
+
